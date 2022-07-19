@@ -40,7 +40,7 @@ def go(args):
 
     # Create latitude/longitude boundaries
     logger.info("limit longitude and latitude to NYC area")
-    df = df[df['longitude'].between(-74.25, -73.50) & df['latitude'].between(40.5, 41.2)]
+    df = df[df['longitude'].between(-74.25, -73.5) & df['latitude'].between(40.5, 41.2)]
 
     # Save file as CSV and load W&B artifact
     logger.info(f"Save cleaned data")
