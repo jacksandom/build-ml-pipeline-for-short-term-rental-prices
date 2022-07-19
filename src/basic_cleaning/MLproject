@@ -1,0 +1,42 @@
+name: basic_cleaning
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+
+      input_artifact:
+        description: Name of input artifact in W&B
+        type: string
+
+      output_artifact:
+        description: Name of output artifact uploaded into W&B
+        type: string
+
+      output_type:
+        description: The type of output artifact
+        type: string
+
+      output_description:
+        description: Description of the output artifact
+        type: string
+
+      min_price:
+        description: Min price when filtering
+        type: float
+
+      max_price:
+        description: Max price when filtering
+        type: float
+
+      min_nights:
+        description: Min nights when filtering
+        type: int
+
+      max_nights:
+        description: Max price when filtering
+        type: int
+
+
+    command: >-
+        python run.py  --input_artifact {input_artifact}  --output_artifact {output_artifact}  --output_type {output_type}  --output_description {output_description}  --min_price {min_price}  --max_price {max_price}  --min_nights {min_nights}  --max_nights {max_nights}
